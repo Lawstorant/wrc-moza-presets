@@ -119,7 +119,7 @@
     </group>
     <group name="navigate">
       <action name="back">
-        <axis name="di_button_32" />
+        <axis name="di_button_31" />
       </action>
       <action name="down">
         <axis name="di_button_6" />
@@ -134,7 +134,7 @@
         <axis name="di_dpad_0_right" />
       </action>
       <action name="select">
-        <axis name="di_button_31" />
+        <axis name="di_button_32" />
       </action>
       <action name="up">
         <axis name="di_button_4" />
