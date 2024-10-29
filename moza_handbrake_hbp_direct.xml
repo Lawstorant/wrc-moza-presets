@@ -5,7 +5,7 @@
     <axis name="di_button_43" axis_set_name="device" axis_set_id="handbrake" />
   </axis_map>
   <axis_defaults>
-    <axis deadzone="0.01" saturation="1" name="di_slider_0">
+    <axis name="di_slider_0">
       <action deadzone="0.2" saturation="0.8" name="driving.handbrake" />
     </axis>
   </axis_defaults>
