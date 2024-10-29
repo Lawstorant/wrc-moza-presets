@@ -47,6 +47,7 @@
       <axis name="di_dpad_0_down" />
     </action>
     <action name="roadside_repair">
+      <axis name="di_button_21" />
       <axis name="di_button_4" />
       <axis name="di_dpad_0_up" />
     </action>
@@ -65,7 +66,7 @@
     </group>
     <group name="look">
       <action name="back">
-        <axis name="di_button_21" />
+        <axis name="di_button_20" />
       </action>
       <group name="camera">
         <group name="chase">
