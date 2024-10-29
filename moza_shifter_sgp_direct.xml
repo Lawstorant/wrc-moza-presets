@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<action_map name="moza_shifter_sgp_direct" device_name="moza_shifter_sgp_direct" library="lib_direct_input" version="3">
+  <axis_map>
+    <axis name="di_button_14" axis_set_name="button" axis_set_id="14" />
+    <axis name="di_button_10" axis_set_name="purple_text" axis_set_id="s1" />
+    <axis name="di_button_11" axis_set_name="purple_text" axis_set_id="s2" />
+    <axis name="di_button_12" axis_set_name="device" axis_set_id="gear_down" />
+    <axis name="di_button_13" axis_set_name="device" axis_set_id="gear_up" />
+  </axis_map>
+  <group name="driving">
+    <group name="gear">
+      <group name="sequential">
+        <action name="down">
+          <axis name="di_button_12" />
+        </action>
+        <action name="up">
+          <axis name="di_button_13" />
+        </action>
+      </group>
+    </group>
+  </group>
+</action_map>
