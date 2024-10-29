@@ -159,10 +159,10 @@
   </group>
   <group name="photomode">
     <action name="exit">
-      <axis name="di_button_32" />
+      <axis name="di_button_31" />
     </action>
     <action name="replay_switcher">
-      <axis name="di_button_31" />
+      <axis name="di_button_32" />
     </action>
     <action name="reset_camera">
       <axis name="di_button_18" />
@@ -181,7 +181,7 @@
   </group>
   <group name="spectator">
     <action name="exit">
-      <axis name="di_button_32" />
+      <axis name="di_button_31" />
     </action>
     <action name="player_profile">
       <axis name="di_button_19" />
@@ -206,7 +206,7 @@
     </group>
     <group name="replay">
       <action name="pause">
-        <axis name="di_button_31" />
+        <axis name="di_button_32" />
       </action>
       <action name="photomode_switcher">
         <axis name="di_button_18" />
@@ -227,7 +227,7 @@
         <axis name="di_button_21" />
       </action>
       <action name="list">
-        <axis name="di_button_31" />
+        <axis name="di_button_32" />
       </action>
       <action name="menu">
         <axis name="di_button_34" />
