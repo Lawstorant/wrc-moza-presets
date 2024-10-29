@@ -9,12 +9,12 @@
     <axis deadzone="0.01" saturation="1" name="di_slider_0">
       <action deadzone="0.2" saturation="0.6" name="driving.clutch" />
     </axis>
-    <axis name="di_z_axis">
+    <axis deadzone="0.01" saturation="1" name="di_z_axis">
       <action deadzone="0" name="driving.accelerate" />
       <action deadzone="0" name="menu.view.in" />
       <action deadzone="0" name="spectator.replay.forward" />
     </axis>
-    <axis deadzone="0.2" saturation="1" name="di_z_axis_rotation">
+    <axis deadzone="0.01" saturation="1" name="di_z_axis_rotation">
       <action deadzone="0" name="driving.brake" />
       <action deadzone="0" name="menu.view.out" />
       <action deadzone="0" name="spectator.replay.rewind" />
