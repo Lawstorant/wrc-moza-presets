@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<action_defines>
+  <collision_groups>
+    <non_collision group1="driving" group2="menu" />
+    <non_collision group1="driving" group2="spectator" />
+    <non_collision group1="driving.gear.h_pattern" group2="driving.gear.sequential" />
+    <non_collision group1="menu" group2="spectator" />
+    <non_collision group1="menu.navigate.scroll" group2="menu.view" />
+    <non_collision group1="menu.navigate.tab.secondary" group2="menu.view" />
+    <non_collision group1="menu.context" group2="menu.view" />
+    <non_collision group1="driving" group2="livery_editor" />
+    <non_collision group1="driving" group2="photomode" />
+    <non_collision group1="livery_editor" group2="menu" />
+    <non_collision group1="livery_editor" group2="photomode" />
+    <non_collision group1="livery_editor" group2="spectator" />
+    <non_collision group1="menu" group2="network" />
+    <non_collision group1="menu" group2="photomode" />
+    <non_collision group1="photomode" group2="spectator" />
+    <non_collision group1="driving.look.camera.chase" group2="driving.look.camera.head" />
+    <non_collision group1="driving.look.camera.chase" group2="driving.look.camera.mounted" />
+    <non_collision group1="driving.look.camera.head" group2="driving.look.camera.mounted" />
+    <non_collision group1="spectator.replay" group2="spectator.driver" />
+    <non_collision group1="spectator.replay" group2="spectator.toggle" />
+  </collision_groups>
+  <group name="driving">
+    <action name="accelerate" />
+    <action name="brake" />
+    <action name="change_view" />
+    <action name="clutch" />
+    <action name="handbrake" />
+    <action name="headlights" />
+    <action name="flashback" protection="not_supported" />
+    <action name="horn" protection="not_supported" />
+    <action name="pause" />
+    <action name="reset_vehicle" />
+    <action name="roadside_repair" />
+    <action name="wipers" />
+    <group name="gear">
+      <group name="h_pattern">
+        <action name="1" />
+        <action name="2" />
+        <action name="3" />
+        <action name="4" />
+        <action name="5" />
+        <action name="6" />
+        <action name="7" />
+        <action name="reverse" />
+      </group>
+      <group name="sequential">
+        <action name="up" />
+        <action name="down" />
+      </group>
+    </group>
+    <group name="look">
+      <action name="back" />
+      <group name="camera">
+        <group name="chase">
+          <action name="up" />
+          <action name="down" />
+          <action name="right" />
+          <action name="left" />
+        </group>
+        <group name="head">
+          <action name="up" />
+          <action name="down" />
+          <action name="left" />
+          <action name="right" />
+        </group>
+        <group name="mounted">
+          <action name="up" />
+          <action name="down" />
+          <action name="left" />
+          <action name="right" />
+        </group>
+      </group>
+    </group>
+    <group name="seat">
+      <action name="reset" />
+      <group name="move">
+        <action name="forward" />
+        <action name="backward" />
+        <action name="up" />
+        <action name="down" />
+      </group>
+      <group name="tilt">
+        <action name="up" />
+        <action name="down" />
+      </group>
+    </group>
+    <group name="steer">
+      <action name="left" />
+      <action name="right" />
+    </group>
+    <group name="engineer" protection="not_supported">
+      <group name="request">
+        <action name="car_damage" />
+        <action name="team_mate_status" />
+        <action name="rival_status" />
+        <action name="split_to_next_car" />
+        <action name="team_mate_attack" />
+        <action name="team_mate_defend" />
+      </group>
+      <group name="command">
+        <action name="1" />
+        <action name="2" />
+      </group>
+    </group>
+  </group>
+  <group name="network">
+    <action name="push_to_speak" />
+    <group name="toggle">
+      <action name="voice" />
+    </group>
+  </group>
+  <group name="menu">
+    <action name="start" />
+    <action name="option" protection="hidden" />
+    <group name="navigate">
+      <action name="back" jpn_alt="select" />
+      <action name="down" />
+      <action name="left" />
+      <action name="right" />
+      <action name="select" jpn_alt="back" />
+      <action name="up" />
+      <action name="begin" />
+      <action name="end" />
+      <group name="scroll">
+        <action name="down" />
+        <action name="up" />
+        <action name="left" />
+        <action name="right" />
+      </group>
+      <group name="tab">
+        <group name="primary">
+          <action name="left" />
+          <action name="right" />
+        </group>
+        <group name="secondary" protection="not_supported">
+          <action name="left" />
+          <action name="right" />
+        </group>
+      </group>
+    </group>
+    <group name="view" protection="none">
+      <action name="down" />
+      <action name="in" />
+      <action name="left" />
+      <action name="out" />
+      <action name="right" />
+      <action name="up" />
+    </group>
+    <group name="cursor" protection="hidden">
+      <group name="button">
+        <action name="left" />
+        <action name="right" />
+        <action name="middle" />
+        <action name="4" />
+        <action name="5" />
+        <group name="double_click">
+          <action name="left" />
+          <action name="right" />
+          <action name="middle" />
+          <action name="4" />
+          <action name="5" />
+        </group>
+      </group>
+      <group name="wheel">
+        <action name="up" />
+        <action name="down" />
+      </group>
+    </group>
+    <group name="context" protection="none">
+      <action name="1" />
+      <action name="2" />
+      <action name="3" />
+      <action name="4" />
+    </group>
+    <group name="text_entry" protection="hidden">
+      <action name="delete" />
+      <action name="backspace" />
+      <action name="autocomplete" />
+      <action name="enter" />
+      <group name="control">
+        <action name="modifier" />
+        <action name="copy" />
+        <action name="cut" />
+        <action name="paste" />
+      </group>
+      <group name="shift">
+        <action name="modifier" />
+      </group>
+      <group name="alt">
+        <action name="modifier" />
+      </group>
+    </group>
+    <group name="shortcut" protection="hidden">
+      <action name="profile" />
+    </group>
+  </group>
+  <group name="spectator" protection="none">
+    <action name="exit" />
+    <action name="player_profile" />
+    <group name="toggle">
+      <action name="music" protection="not_supported" />
+      <action name="ui" />
+      <action name="menu" />
+      <action name="list" />
+      <action name="standings" />
+      <action name="controls" />
+    </group>
+    <group name="camera">
+      <action name="previous" />
+      <action name="next" />
+    </group>
+    <group name="driver">
+      <action name="next" />
+      <action name="previous" />
+    </group>
+    <group name="replay">
+      <action name="rewind" />
+      <action name="forward" />
+      <action name="photomode_switcher" />
+      <action name="pause" />
+      <group name="speed">
+        <action name="up" />
+        <action name="down" />
+      </group>
+    </group>
+  </group>
+  <group name="photomode" protection="none">
+    <action name="replay_switcher" />
+    <action name="exit" />
+    <action name="reset_camera" />
+    <group name="toggle">
+      <action name="ui" />
+      <action name="camera_mode" />
+      <action name="menu" />
+    </group>
+    <group name="camera" protection="none">
+      <group name="move">
+        <action name="forward" />
+        <action name="backward" />
+        <action name="left" />
+        <action name="right" />
+        <action name="up" />
+        <action name="down" />
+      </group>
+      <group name="turn">
+        <action name="left" />
+        <action name="right" />
+        <action name="up" />
+        <action name="down" />
+      </group>
+      <group name="roll">
+        <action name="left" />
+        <action name="right" />
+      </group>
+    </group>
+  </group>
+  <group name="livery_editor" protection="none">
+    <group name="decal">
+      <group name="tilt">
+        <action name="right" />
+        <action name="left" />
+      </group>
+      <group name="depth">
+        <action name="out" />
+        <action name="in" />
+      </group>
+      <group name="height">
+        <action name="increase" />
+        <action name="decrease" />
+      </group>
+      <group name="width">
+        <action name="decrease" />
+        <action name="increase" />
+      </group>
+      <group name="move">
+        <action name="down" />
+        <action name="up" />
+        <action name="left" />
+        <action name="right" />
+      </group>
+      <group name="scale">
+        <action name="up" />
+        <action name="down" />
+      </group>
+      <group name="roll">
+        <action name="left" />
+        <action name="right" />
+      </group>
+    </group>
+  </group>
+  <group name="vr">
+    <group name="view">
+      <action name="reset" />
+    </group>
+  </group>
+</action_defines>

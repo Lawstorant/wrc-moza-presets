@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<device_list>
+  <!--
+    Device configuration file.
+    This file is used to define device definitions and their usage in the game.
+
+    To add a new device add a device node with following attributes:
+      id -  The hardware id for PC devices is essentially '{PID#VID#-0000-0000-0000-504944564944}' where PID# and VID# is replaced with the Product ID and Vender ID of the device.
+            You can get these ID's by looking in Devices & Printers, Properties on the required device, Hardware tab, USB Input Device, Properties. In 'Information' you should see VID_#### and PID_####.
+            Take the hex values proceeding the underscore and replace into the above sample.
+            e.g.
+              'Device USB\VID_045E&PID_028E&IG_00\8&3afa0edf&0&00 was configured.'
+              {028E045E-0000-0000-0000-504944564944}
+      name - The name of the device matching the name used in the action maps.
+      priority - The higher the priority the more likely the device is used in automatic selection mode as the steering device over other devices.
+      {
+        0 - reserved for not_supported devices
+        1-5, 99 - reserved for library defaults
+        6-98 - pads
+        100+ - wheels
+      }
+      version (Optional) - Hardware version of the device, used in conjunction with action map device versioning
+      type (Optional) - The type of device, if set to 'unknown' will use the type returned from the driver, otherwise it will overwrite with the selection.
+      {
+        wheel
+        pad
+        joystick
+        keyboard
+        mouse
+        pedal
+        shifter
+        handbreak
+        unknown - Default
+        not_supported
+      }
+
+      ffb (Optional)
+      {
+        default - Default - Uses the value returned from the drivers
+        enabled - Force enables the ffb even if the drivers return disabled.
+        disabled - Force disables the ffb even if the drivers return enabled.
+      }
+      ffb_force (Optional) - 0.66 is the lowest value to enable user to scale back up to 1.
+      {
+        1.0 - Default
+      }
+      ffb_friction (Optional)
+      {
+        1.0 - Default
+      }
+      ffb_high_pass (Optional)
+      {
+        0.0 - Default
+      }
+      default (Optional)
+      {
+        false - Default
+        true - Used only by input library defaults
+      }
+      collections_max (Optional) -  A collection limit >1 or 0 will allow new devices to be created with the postfix '_col##' to the hardware id.
+                                    These devices can be used to extend functionality with additional device id's if the device supports them.
+                                    e.g.
+                                      <device id="{00050EB7-0000-0000-0000-504944564944}" name="ftec_csl_p1" priority="100" type="wheel" collections_max="2" />
+
+                                    You can now setup an optional collection id to give the second collection it's own action map.
+                                      <device id="{00050EB7-0000-0000-0000-504944564944}_col02" name="ftec_csl_p1_col02" priority="100" type="wheel" ffb="disabled" />
+      {
+        0 - No collection limit
+        1 - Default
+        >1
+      }
+
+    Unknown devices fallback to default libraries defined below in 'Library Default (fallbacks)' if not manually defined.
+    Unsupported devices that are not compatible with the game can be added to the 'Not Supported' list to prevent initialisation.
+
+  -->
+  <device id="{00200EB7-0000-0000-0000-504944564944}" name="ftec_base_ddcsl" priority="100" type="wheel">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{00060EB7-0000-0000-0000-504944564944}" name="ftec_base_dd10" priority="100" type="wheel">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{00070EB7-0000-0000-0000-504944564944}" name="ftec_base_dd20" priority="100" type="wheel">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{038E0EB7-0000-0000-0000-504944564944}" name="ftec_base_csw" priority="100" type="wheel" ffb_force="0.78" ffb_friction="0.66">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+  </device>
+  <device id="{00010EB7-0000-0000-0000-504944564944}" name="ftec_base_csw" priority="100" type="wheel" ffb_force="0.78" ffb_friction="0.66">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+  </device>
+  <device id="{00040EB7-0000-0000-0000-504944564944}" name="ftec_base_csw" priority="100" type="wheel" ffb_force="0.78" ffb_friction="0.66">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{0E030EB7-0000-0000-0000-504944564944}" name="ftec_base_csle" priority="100" type="wheel">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{00050EB7-0000-0000-0000-504944564944}" name="ftec_base_csleps4" priority="100" type="wheel">
+    <sub_device id="ftec_rim_csswbmw" name="ftec_rim_csswbmw" />
+    <sub_device id="ftec_rim_csswform" name="ftec_rim_csswform" />
+    <sub_device id="ftec_rim_csswformv2" name="ftec_rim_csswformv2" />
+    <sub_device id="ftec_rim_csleswmcl" name="ftec_rim_csleswmcl" />
+    <sub_device id="ftec_rim_csleswp1ps4" name="ftec_rim_csleswp1ps4" />
+    <sub_device id="ftec_rim_csleswp1x" name="ftec_rim_csleswp1x" />
+    <sub_device id="ftec_rim_csswporsche" name="ftec_rim_csswporsche" />
+    <sub_device id="ftec_rim_csswuh" name="ftec_rim_csswuh" />
+    <sub_device id="ftec_rim_csswuhx" name="ftec_rim_csswuhx" />
+    <sub_device id="ftec_rim_csleswmclv2" name="ftec_rim_csleswmclv2" />
+    <sub_device id="ftec_rim_phub" name="ftec_rim_phub" />
+    <sub_device id="ftec_rim_gtswpro" name="ftec_rim_gtswpro" />
+    <sub_device id="ftec_rim_cslswuh" name="ftec_rim_cslswuh" />
+    <sub_device id="ftec_rim_csleswwrc" name="ftec_rim_csleswwrc" />
+    <sub_device id="ftec_rim_csswbmwv2" name="ftec_rim_csswbmwv2" />
+    <sub_device id="ftec_rim_csswrs" name="ftec_rim_csswrs" />
+    <sub_device id="ftec_rim_csuhv2" name="ftec_rim_csuhv2" />
+    <sub_device id="ftec_rim_csswf1esv2" name="ftec_rim_csswf1esv2" />
+    <sub_device id="ftec_rim_pswbmw" name="ftec_rim_pswbmw" />
+    <sub_device id="ftec_pedals_analog" name="ftec_pedals_analog" />
+    <sub_device id="ftec_pedals_cspv3" name="ftec_pedals_cspv3" />
+    <sub_device id="ftec_pedals_csleplc" name="ftec_pedals_csleplc" />
+    <sub_device id="ftec_pedals_cslplck" name="ftec_pedals_cslplck" />
+    <sub_device id="ftec_pedals_cslep" name="ftec_pedals_cslep" />
+    <sub_device id="ftec_shifter" name="ftec_shifter" />
+    <sub_device id="ftec_handbrake" name="ftec_handbrake" />
+    <sub_device id="ftec_button_module" name="ftec_button_module" />
+  </device>
+  <device id="{00110EB7-0000-0000-0000-504944564944}" name="ftec_wheel_csre" priority="100" type="wheel" official="false" />
+  <device id="{01970EB7-0000-0000-0000-504944564944}" name="ftec_wheel_pwc" priority="100" type="wheel" official="false" />
+  <device id="{1A920EB7-0000-0000-0000-504944564944}" name="ftec_shifter" priority="50" type="shifter" />
+  <device id="{1A930EB7-0000-0000-0000-504944564944}" name="ftec_handbrake" priority="50" type="handbrake" />
+  <device id="{1A950EB7-0000-0000-0000-504944564944}" name="ftec_pedals_cslep" priority="75" type="pedal" />
+  <device id="{18390EB7-0000-0000-0000-504944564944}" name="ftec_pedals_analog" priority="75" type="pedal" />
+  <device id="{183B0EB7-0000-0000-0000-504944564944}" name="ftec_pedals_cspv3" priority="75" type="pedal" />
+  <device id="{62040EB7-0000-0000-0000-504944564944}" name="ftec_pedals_csleplc" priority="75" type="pedal" />
+  <device id="{62050EB7-0000-0000-0000-504944564944}" name="ftec_pedals_cslplck" priority="75" type="pedal" />
+  <device id="{62060EB7-0000-0000-0000-504944564944}" name="ftec_pedals_cslepv2" priority="75" type="pedal" />
+  <device id="{B684044F-0000-0000-0000-504944564944}" name="tm_base_tgt" priority="100" type="wheel" ffb_force="0.9">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B681044F-0000-0000-0000-504944564944}" name="tm_base_tgt" priority="0" type="not_supported" />
+  <device id="{B66E044F-0000-0000-0000-504944564944}" name="tm_base_t300rs" priority="100" type="wheel">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B65E044F-0000-0000-0000-504944564944}" name="tm_base_t500rs" priority="100" type="wheel">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B662044F-0000-0000-0000-504944564944}" name="tm_base_t500rsf1" priority="100" type="wheel">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B689044F-0000-0000-0000-504944564944}" name="tm_base_tspc" priority="100" type="wheel" ffb_force="0.9">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B692044F-0000-0000-0000-504944564944}" name="tm_base_tsxw" priority="100" type="wheel">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B669044F-0000-0000-0000-504944564944}" name="tm_base_tx" priority="100" type="wheel">
+    <sub_device id="tm_rim" name="tm_rim" attached="true" />
+    <sub_device id="tm_pedals" name="tm_pedals" attached="true" />
+  </device>
+  <device id="{B696044F-0000-0000-0000-504944564944}" name="tm_wheel_pc" priority="100" type="wheel" />
+  <device id="{B697044F-0000-0000-0000-504944564944}" name="tm_wheel_t80" priority="100" type="wheel" ffb="disabled" />
+  <device id="{B667044F-0000-0000-0000-504944564944}" name="tm_wheel_t80" priority="0" type="not_supported" />
+  <device id="{B677044F-0000-0000-0000-504944564944}" name="tm_wheel_t150" priority="100" type="wheel" />
+  <device id="{B67F044F-0000-0000-0000-504944564944}" name="tm_wheel_tmx" priority="100" type="wheel" />
+  <device id="{B65A044F-0000-0000-0000-504944564944}" name="tm_wheel_f430" priority="100" type="wheel" official="false" />
+  <device id="{B671044F-0000-0000-0000-504944564944}" name="tm_wheel_f458" priority="100" type="wheel" official="false" />
+  <device id="{B655044F-0000-0000-0000-504944564944}" name="tm_wheel_fgt" priority="100" type="wheel" official="false" />
+  <device id="{B653044F-0000-0000-0000-504944564944}" name="tm_wheel_rgt" priority="100" type="wheel" official="false" />
+  <device id="{B678044F-0000-0000-0000-504944564944}" name="tm_pedals_usb" priority="100" type="pedal" />
+  <device id="{B660044F-0000-0000-0000-504944564944}" name="tm_shifter" priority="50" type="shifter" />
+  <device id="{B695044F-0000-0000-0000-504944564944}" name="tm_handbrake" priority="50" type="handbrake" />
+  <device id="{C299046D-0000-0000-0000-504944564944}" name="lg_g25" priority="100" type="wheel" />
+  <device id="{C29B046D-0000-0000-0000-504944564944}" name="lg_g27" priority="100" type="wheel" />
+  <device id="{C24F046D-0000-0000-0000-504944564944}" name="lg_g29" priority="100" type="wheel" />
+  <device id="{C262046D-0000-0000-0000-504944564944}" name="lg_g920" priority="100" type="wheel" ffb_friction="0.66" />
+  <device id="{C266046D-0000-0000-0000-504944564944}" name="lg_g923_ps4" priority="100" type="wheel" />
+  <device id="{C26E046D-0000-0000-0000-504944564944}" name="lg_g923_xone" priority="100" type="wheel" />
+  <device id="{C268046D-0000-0000-0000-504944564944}" name="lg_gpro_ps" priority="100" type="wheel" />
+  <device id="{C272046D-0000-0000-0000-504944564944}" name="lg_gpro_xb" priority="100" type="wheel" />
+  <device id="{C26A046D-0000-0000-0000-504944564944}" name="lg_pedals_pro" priority="75" type="pedal" />
+  <device id="{C294046D-0000-0000-0000-504944564944}" name="lg_driving_force_ex" priority="97" type="wheel" official="false" />
+  <device id="{C29A046D-0000-0000-0000-504944564944}" name="lg_driving_force_gt" priority="96" type="wheel" official="false" />
+  <device id="{C298046D-0000-0000-0000-504944564944}" name="lg_driving_force_pro" priority="98" type="wheel" ffb_friction="0.15" official="false" />
+  <device id="{CA03046D-0000-0000-0000-504944564944}" name="lg_momo_racing" priority="100" type="wheel" ffb_friction="0.15" official="false" />
+  <device id="{45030738-0000-0000-0000-504944564944}" name="mc_pro_r" priority="100" type="wheel" official="false" />
+  <device id="{10201DD2-0000-0000-0000-504944564944}" name="sim_steering" priority="100" type="wheel" ffb_force="0.5" />
+  <device id="{22301DD2-0000-0000-0000-504944564944}" name="sim_steering" priority="100" type="wheel" ffb_force="0.5" />
+  <device id="{22331DD2-0000-0000-0000-504944564944}" name="sim_steering" priority="100" type="wheel" ffb_force="0.5" />
+  <device id="{804C1FC9-0000-0000-0000-504944564944}" name="simxperience_accuforce_pro" priority="100" type="wheel" />
+  <device id="{C216046D-0000-0000-0000-504944564944}" name="lg_dual_action" priority="24" type="pad" official="false" />
+  <device id="{C218046D-0000-0000-0000-504944564944}" name="lg_f510" priority="24" type="pad" official="false" />
+  <device id="{C219046D-0000-0000-0000-504944564944}" name="lg_f710_and_cordless_rumblepad_2" priority="24" type="pad" official="false" />
+  <device id="{0034045E-0000-0000-0000-504944564944}" name="ms_sidewinder_ffb" priority="100" type="wheel" ffb="enabled" official="false" />
+  <device id="{00030E8F-0000-0000-0000-504944564944}" name="sl_strikefx" priority="24" type="pad" official="false" />
+  <device id="{910511C0-0000-0000-0000-504944564944}" name="sl_torid" priority="24" type="pad" official="false" />
+  <device id="{B323044F-0000-0000-0000-504944564944}" name="tm_dual_trigger_3_in_1" priority="24" type="pad" official="false" />
+  <device id="{00080E8F-0000-0000-0000-504944564944}" name="grid2_pad" priority="100" type="wheel" official="false" />
+  <device id="{05C4054C-0000-0000-0000-504944564944}" name="ps4_pad" priority="25" type="pad" />
+  <device id="{0BA0054C-0000-0000-0000-504944564944}" name="ps4_pad" priority="25" type="pad" />
+  <device id="{09CC054C-0000-0000-0000-504944564944}" name="ps4_pad" priority="25" type="pad" />
+  <device id="{0CE6054C-0000-0000-0000-504944564944}" name="ps5_pad" priority="25" type="pad" />
+  <device id="{0DF2054C-0000-0000-0000-504944564944}" name="ps5_edge_pad" priority="25" type="pad" />
+  <device id="keyboard" name="keyboard_pc" priority="2" type="keyboard" default="true" />
+  <device id="mouse" name="mouse" priority="1" type="mouse" default="true" />
+  <device id="xinput_pad" name="xinput_pad" priority="25" type="pad" default="true" />
+  <device id="xinput_wheel" name="xinput_wheel" priority="99" type="wheel" ffb_force="10" default="true" />
+  <device id="pad_virtual" name="pad_virtual" priority="0" type="pad" default="true" />
+  <device id="lib_direct_input" name="lib_direct_input" priority="5" type="unknown" default="true" />
+  <device id="lib_direct_input_pad" name="lib_direct_input_pad" priority="23" type="pad" default="true" />
+  <device id="lib_direct_input_wheel" name="lib_direct_input_wheel" priority="99" type="wheel" default="true" />
+  <device id="{C626046D-0000-0000-0000-504944564944}" name="space_navigator" priority="0" type="not_supported" />
+  <device id="{046DBEEF-0000-0000-0000-504944564944}" name="space_navigator_driver" priority="0" type="not_supported" />
+  <device id="{07051532-0000-0000-0000-504944564944}" name="rz_raiju_mobile_pad" priority="24" type="pad" official="false" />
+  <device id="{0FFBF055-0000-0000-0000-504944564944}" name="simucube_osw_mmos" priority="100" type="wheel" official="false" />
+  <device id="{0D5A16D0-0000-0000-0000-504944564944}" name="simucube_osw" priority="100" type="wheel" official="false" />
+  <device id="{0D6116D0-0000-0000-0000-504944564944}" name="simucube2_sport" priority="100" type="wheel" official="false" />
+  <device id="{0D6016D0-0000-0000-0000-504944564944}" name="simucube2_pro" priority="100" type="wheel" official="false" />
+  <device id="{0D5F16D0-0000-0000-0000-504944564944}" name="simucube2_ultimate" priority="100" type="wheel" official="false" />
+  <device id="{05220483-0000-0000-0000-504944564944}" name="simagic_base" priority="100" type="wheel" official="false" />
+  <device id="{05240483-0000-0000-0000-504944564944}" name="simagic_pedals" priority="75" type="pedal" official="false" />
+  <device id="{707710F5-0000-0000-0000-504944564944}" name="tb_wheel_vo_race" priority="100" type="wheel" />
+  <device id="{0000346E-0000-0000-0000-504944564944}" name="moza_base_r16_r21" priority="100" type="wheel">
+    <sub_device id="moza_rim" name="moza_rim" attached="true" />
+    <sub_device id="moza_pedals" name="moza_pedals" attached="true" />
+    <sub_device id="moza_shifter" name="moza_shifter" attached="true" />
+    <sub_device id="moza_handbrake" name="moza_handbrake" attached="true" />
+  </device>
+  <device id="{0002346E-0000-0000-0000-504944564944}" name="moza_base_r9" priority="100" type="wheel">
+    <sub_device id="moza_rim" name="moza_rim" attached="true" />
+    <sub_device id="moza_pedals" name="moza_pedals" attached="true" />
+    <sub_device id="moza_shifter" name="moza_shifter" attached="true" />
+    <sub_device id="moza_handbrake" name="moza_handbrake" attached="true" />
+  </device>
+  <device id="{0004346E-0000-0000-0000-504944564944}" name="moza_base_r5" priority="100" type="wheel">
+    <sub_device id="moza_rim" name="moza_rim" attached="true" />
+    <sub_device id="moza_pedals" name="moza_pedals" attached="true" />
+    <sub_device id="moza_shifter" name="moza_shifter" attached="true" />
+    <sub_device id="moza_handbrake" name="moza_handbrake" attached="true" />
+  </device>
+  <device id="{0005346E-0000-0000-0000-504944564944}" name="moza_base_r3" priority="100" type="wheel">
+    <sub_device id="moza_rim" name="moza_rim" attached="true" />
+    <sub_device id="moza_pedals" name="moza_pedals" attached="true" />
+    <sub_device id="moza_shifter" name="moza_shifter" attached="true" />
+    <sub_device id="moza_handbrake" name="moza_handbrake" attached="true" />
+  </device>
+  <device id="{0006346E-0000-0000-0000-504944564944}" name="moza_base_r12" priority="100" type="wheel">
+    <sub_device id="moza_rim" name="moza_rim" attached="true" />
+    <sub_device id="moza_pedals" name="moza_pedals" attached="true" />
+    <sub_device id="moza_shifter" name="moza_shifter" attached="true" />
+    <sub_device id="moza_handbrake" name="moza_handbrake" attached="true" />
+  </device>
+  <device id="{0001346E-0000-0000-0000-504944564944}" name="moza_pedals_crp_direct" priority="75" type="pedal" />
+  <device id="{0003346E-0000-0000-0000-504944564944}" name="moza_pedals_srp_direct" priority="75" type="pedal" />
+  <device id="{0007346E-0000-0000-0000-504944564944}" name="moza_pedals_crp2_direct" priority="75" type="pedal" />
+  <device id="lib_open_xr" name="lib_open_xr" priority="4" type="pad" default="true" />
+  <device id="open_xr_FFFFD23E" name="open_xr" priority="4" type="pad" official="false" />
+  <device id="open_xr_000028DE" name="open_xr" priority="4" type="pad" official="false" />
+  <device id="open_xr_00000BB4" name="open_xr" priority="4" type="pad" official="false" />
+  <device id="{001F346E-0000-0000-0000-504944564944}" name="moza_handbrake_hbp_direct" priority="50" type="handbrake" />
+  <device id="{0023346E-0000-0000-0000-504944564944}" name="moza_shifter_sgp_direct" priority="50" type="shifter" />
+  <device id="{001E346E-0000-0000-0000-504944564944}" name="moza_shifter_hgp_direct" priority="50" type="shifter" />
+</device_list>
