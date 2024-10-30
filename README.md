@@ -1,5 +1,11 @@
 # Improved Moza Racing presets for EA Sports WRC
 
+### action_defines.xml:
+- Removed protections. It's now possible to rebind menu, photomode etc. controls again.
+
+### device_defines.xml:
+- Added entry for the upcoming CRP2 pedal set. The product ID is a guess for now so it's not final. I'll update it when they arrive
+
 ### Pedals:
 - Modified deadzone values for all axes. 1% by default, 20% for clutch.
 - Added preset for the upcoming CRP2 pedal set.

@@ -141,7 +141,7 @@
         </group>
       </group>
     </group>
-    <group name="view" protection="none">
+    <group name="view">
       <action name="down" />
       <action name="in" />
       <action name="left" />
@@ -169,7 +169,7 @@
         <action name="down" />
       </group>
     </group>
-    <group name="context" protection="none">
+    <group name="context">
       <action name="1" />
       <action name="2" />
       <action name="3" />
@@ -197,7 +197,7 @@
       <action name="profile" />
     </group>
   </group>
-  <group name="spectator" protection="none">
+  <group name="spectator">
     <action name="exit" />
     <action name="player_profile" />
     <group name="toggle">
@@ -227,7 +227,7 @@
       </group>
     </group>
   </group>
-  <group name="photomode" protection="none">
+  <group name="photomode">
     <action name="replay_switcher" />
     <action name="exit" />
     <action name="reset_camera" />
@@ -236,7 +236,7 @@
       <action name="camera_mode" />
       <action name="menu" />
     </group>
-    <group name="camera" protection="none">
+    <group name="camera">
       <group name="move">
         <action name="forward" />
         <action name="backward" />
@@ -257,7 +257,7 @@
       </group>
     </group>
   </group>
-  <group name="livery_editor" protection="none">
+  <group name="livery_editor">
     <group name="decal">
       <group name="tilt">
         <action name="right" />
