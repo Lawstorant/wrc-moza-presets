@@ -1,5 +1,8 @@
 # Improved Moza Racing presets for EA Sports WRC
 
+To update your presets go to the `game installation directory -> Content -> input -> windows`.
+Copy over all the files in this repository and overwrite if asked to. You need to restart your game for this changes to take effect.
+
 ### action_defines.xml:
 - Removed protections. It's now possible to rebind menu, photomode etc. controls again.
 
