@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This preset is also compatible with CRP2 pedals as they are internally the same device -->
 <action_map name="moza_pedals_crp" sub_device_name="moza_pedals" library="lib_direct_input" version="4">
   <axis_map>
     <axis name="di_slider_0" axis_set_name="device" axis_set_id="pedal_clutch" />

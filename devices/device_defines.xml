@@ -437,7 +437,6 @@
   </device>
   <device id="{0001346E-0000-0000-0000-504944564944}" name="moza_pedals_crp_direct" priority="75" type="pedal" />
   <device id="{0003346E-0000-0000-0000-504944564944}" name="moza_pedals_srp_direct" priority="75" type="pedal" />
-  <device id="{0007346E-0000-0000-0000-504944564944}" name="moza_pedals_crp2_direct" priority="75" type="pedal" />
   <device id="lib_open_xr" name="lib_open_xr" priority="4" type="pad" default="true" />
   <device id="open_xr_FFFFD23E" name="open_xr" priority="4" type="pad" official="false" />
   <device id="open_xr_000028DE" name="open_xr" priority="4" type="pad" official="false" />

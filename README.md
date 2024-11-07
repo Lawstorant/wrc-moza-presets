@@ -11,8 +11,8 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 
 ### Pedals:
 - Modified deadzone values for all axes. 1% by default, 20% for clutch.
-- Added preset for the upcoming CRP2 pedal set.
 - Fix `sub_device_name` in CRP preset. Preset shows up in the game UI now.
+- CRP preset can be used with the CRP2 pedal set (it's the same device internally). The pretty name should be updated to reflect that
 
 ### SGP Sequential Shifter:
 - Reversed the upshift/downshift mappings (pull for gear up, push for gear down).
