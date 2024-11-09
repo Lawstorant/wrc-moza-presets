@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<action_map name="simagic_shifter_ds8x_direct" device_name="simagic_shifter_ds8x_direct" library="lib_direct_input" version="1">
+<action_map name="simagic_shifter_ds8x" device_name="simagic_shifter_ds8x" library="lib_direct_input" version="1">
   <axis_map>
     <axis name="di_button_0" axis_set_name="device" axis_set_id="gear_1" />
     <axis name="di_button_1" axis_set_name="device" axis_set_id="gear_2" />
@@ -19,7 +19,7 @@
           <axis name="di_button_0" />
         </action>
         <action name="2">
-          <axis name="di_button_6" />
+          <axis name="di_button_1" />
         </action>
         <action name="3">
           <axis name="di_button_2" />
