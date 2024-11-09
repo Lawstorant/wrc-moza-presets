@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<action_map name="simagic_shifter_ds8x_direct" device_name="simagic_shifter_ds8x_direct" library="lib_direct_input" version="1">
+  <axis_map>
+    <axis name="di_button_0" axis_set_name="device" axis_set_id="gear_1" />
+    <axis name="di_button_1" axis_set_name="device" axis_set_id="gear_2" />
+    <axis name="di_button_2" axis_set_name="device" axis_set_id="gear_3" />
+    <axis name="di_button_3" axis_set_name="device" axis_set_id="gear_4" />
+    <axis name="di_button_4" axis_set_name="device" axis_set_id="gear_5" />
+    <axis name="di_button_5" axis_set_name="device" axis_set_id="gear_6" />
+    <axis name="di_button_6" axis_set_name="device" axis_set_id="gear_7" />
+    <axis name="di_button_8" axis_set_name="device" axis_set_id="gear_reverse" />
+    <axis name="di_button_9" axis_set_name="device" axis_set_id="gear_down" />
+    <axis name="di_button_10" axis_set_name="device" axis_set_id="gear_up" />
+  </axis_map>
+  <group name="driving">
+    <group name="gear">
+      <group name="h_pattern">
+        <action name="1">
+          <axis name="di_button_0" />
+        </action>
+        <action name="2">
+          <axis name="di_button_6" />
+        </action>
+        <action name="3">
+          <axis name="di_button_2" />
+        </action>
+        <action name="4">
+          <axis name="di_button_3" />
+        </action>
+        <action name="5">
+          <axis name="di_button_4" />
+        </action>
+        <action name="6">
+          <axis name="di_button_5" />
+        </action>
+        <action name="7">
+          <axis name="di_button_6" />
+        </action>
+        <action name="reverse">
+          <axis name="di_button_8" />
+        </action>
+      </group>
+      <group name="sequential">
+        <action name="down">
+          <axis name="di_button_9" />
+        </action>
+        <action name="up">
+          <axis name="di_button_10" />
+        </action>
+      </group>
+    </group>
+  </group>
+</action_map>

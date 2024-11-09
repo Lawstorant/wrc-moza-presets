@@ -444,4 +444,5 @@
   <device id="{001F346E-0000-0000-0000-504944564944}" name="moza_handbrake_hbp_direct" priority="50" type="handbrake" />
   <device id="{0023346E-0000-0000-0000-504944564944}" name="moza_shifter_sgp_direct" priority="50" type="shifter" />
   <device id="{001E346E-0000-0000-0000-504944564944}" name="moza_shifter_hgp_direct" priority="50" type="shifter" />
+  <device id="{04830531-0000-0000-0000-504944564944}" name="simagic_shifter_ds8x_direct" priority="50" type="shifter" />
 </device_list>
