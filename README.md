@@ -7,7 +7,8 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 - Removed protections. It's now possible to rebind menu, photomode etc. controls again.
 
 ### device_defines.xml:
-- Added entry for the upcoming CRP2 pedal set. The product ID is a guess for now so it's not final. I'll update it when they arrive
+- CRP2 pedal set is the same internally as the CRP. Name should be updated to CRP/CRP2 in the game
+- Added entry for Simagic DS-8X shifter
 
 ### Pedals:
 - Modified deadzone values for all axes. 1% by default, 20% for clutch.
@@ -32,3 +33,8 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 - Utilise `P` button as `pause`
 - Utilise `N` button as `look_back`
 - Utilise `S1` and `S2` buttons as `context_3` and `context_4`
+
+### Simagic DS-8X
+- Linked graphics to all input buttons
+- Mapped Sequential mode
+- Mapped H-Pattern mode
