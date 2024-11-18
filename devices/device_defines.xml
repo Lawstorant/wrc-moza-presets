@@ -404,7 +404,7 @@
   <device id="{0D5F16D0-0000-0000-0000-504944564944}" name="simucube2_ultimate" priority="100" type="wheel" official="false" />
   <device id="{05220483-0000-0000-0000-504944564944}" name="simagic_base" priority="100" type="wheel" official="false" />
   <device id="{05240483-0000-0000-0000-504944564944}" name="simagic_pedals" priority="75" type="pedal" official="false" />
-  <device id="{05310483-0000-0000-0000-504944564944}" name="simagic_shifter_ds8x" priority="50" type="shifter" official="false" />
+  <!-- <device id="{05310483-0000-0000-0000-504944564944}" name="simagic_shifter_ds8x" priority="50" type="shifter" official="false" /> -->
   <device id="{707710F5-0000-0000-0000-504944564944}" name="tb_wheel_vo_race" priority="100" type="wheel" />
   <device id="{0000346E-0000-0000-0000-504944564944}" name="moza_base_r16_r21" priority="100" type="wheel">
     <sub_device id="moza_rim" name="moza_rim" attached="true" />
