@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<action_map name="moza_rim_es" sub_device_name="moza_rim" library="lib_direct_input" version="7">
+  <axis_map>
+    <axis name="di_button_0" axis_set_name="black_text" axis_set_id="a" />
+	<axis name="di_button_1" axis_set_name="black_text" axis_set_id="b" />
+	<axis name="di_button_2" axis_set_name="black_text" axis_set_id="x" />
+	<axis name="di_button_3" axis_set_name="black_text" axis_set_id="y" />
+	<axis name="di_button_4" axis_set_name="dpad" axis_set_id="0_up" />
+	<axis name="di_button_5" axis_set_name="dpad" axis_set_id="0_right" />
+	<axis name="di_button_6" axis_set_name="dpad" axis_set_id="0_down" />
+	<axis name="di_button_7" axis_set_name="dpad" axis_set_id="0_left" />
+	<axis name="di_button_12" axis_set_name="device" axis_set_id="gear_down" />
+	<axis name="di_button_13" axis_set_name="device" axis_set_id="gear_up" />
+	<axis name="di_button_18" axis_set_name="black_text" axis_set_id="n" />
+	<axis name="di_button_19" axis_set_name="black_text" axis_set_id="wip" />
+	<axis name="di_button_20" axis_set_name="black_text" axis_set_id="fl" />
+	<axis name="di_button_21" axis_set_name="black_text" axis_set_id="cam" />
+	<axis name="di_button_22" axis_set_name="black_text" axis_set_id="radio" />
+	<axis name="di_button_23" axis_set_name="black_text" axis_set_id="s1" />
+	<axis name="di_button_24" axis_set_name="black_text" axis_set_id="home" />
+	<axis name="di_button_31" axis_set_name="black_text" axis_set_id="p" />
+	<axis name="di_button_32" axis_set_name="black_text" axis_set_id="box" />
+	<axis name="di_button_33" axis_set_name="black_text" axis_set_id="pl" />
+	<axis name="di_button_34" axis_set_name="black_text" axis_set_id="r" />
+	<axis name="di_button_35" axis_set_name="black_text" axis_set_id="start" />
+	<axis name="di_button_36" axis_set_name="black_text" axis_set_id="s2" />
+	<axis name="di_button_37" axis_set_name="black_text" axis_set_id="menu" />
+	
+  </axis_map>
+  <group name="driving">
+    <action name="change_view">
+      <axis name="di_button_18" />
+    </action>
+    <action name="handbrake">
+      <axis name="di_button_31" />
+    </action>
+    <action name="headlights">
+      <axis name="di_button_19" />
+    </action>
+    <action name="pause">
+      <axis name="di_button_36" />
+    </action>
+    <action name="reset_vehicle">
+      <axis name="di_button_6" />
+    </action>
+    <action name="roadside_repair">
+      <axis name="di_button_4" />
+    </action>
+    <action name="wipers">
+      <axis name="di_button_32" />
+    </action>
+    <group name="gear">
+      <group name="sequential">
+        <action name="down">
+          <axis name="di_button_12" />
+        </action>
+        <action name="up">
+          <axis name="di_button_13" />
+        </action>
+      </group>
+    </group>
+    <group name="look">
+      <action name="back">
+        <axis name="di_button_21" />
+      </action>
+      <group name="camera">
+        <group name="chase">
+          <action name="left">
+            <axis name="di_button_7" />
+          </action>
+          <action name="right">
+            <axis name="di_button_5" />
+          </action>
+        </group>
+        <group name="head">
+          <action name="left">
+            <axis name="di_button_7" />
+          </action>
+          <action name="right">
+            <axis name="di_button_5" />
+          </action>
+        </group>
+        <group name="mounted">
+          <action name="left">
+            <axis name="di_button_7" />
+          </action>
+          <action name="right">
+            <axis name="di_button_5" />
+          </action>
+        </group>
+      </group>
+    </group>
+  </group>
+  <group name="menu">
+    <action name="option">
+      <axis name="di_button_23" />
+    </action>
+    <action name="start">
+      <axis name="di_button_36" />
+    </action>
+    <group name="context">
+      <action name="1">
+        <axis name="di_button_2" />
+      </action>
+      <action name="2">
+        <axis name="di_button_3" />
+      </action>
+    </group>
+    <group name="navigate">
+      <action name="back">
+        <axis name="di_button_1" />
+      </action>
+      <action name="down">
+        <axis name="di_button_6" />
+      </action>
+      <action name="left">
+        <axis name="di_button_7" />
+      </action>
+      <action name="right">
+        <axis name="di_button_5" />
+      </action>
+      <action name="select">
+        <axis name="di_button_0" />
+      </action>
+      <action name="up">
+        <axis name="di_button_4" />
+      </action>
+      <group name="tab">
+        <group name="primary">
+          <action name="left">
+            <axis name="di_button_12" />
+          </action>
+          <action name="right">
+            <axis name="di_button_13" />
+          </action>
+        </group>
+      </group>
+    </group>
+  </group>
+  <group name="photomode">
+    <action name="exit">
+      <axis name="di_button_1" />
+    </action>
+    <action name="replay_switcher">
+      <axis name="di_button_0" />
+    </action>
+    <action name="reset_camera">
+      <axis name="di_button_3" />
+    </action>
+    <group name="toggle">
+      <action name="camera_mode">
+        <axis name="di_button_2" />
+      </action>
+      <action name="menu">
+        <axis name="di_button_36" />
+      </action>
+      <action name="ui">
+        <axis name="di_button_23" />
+      </action>
+    </group>
+  </group>
+  <group name="spectator">
+    <action name="exit">
+      <axis name="di_button_1" />
+    </action>
+    <action name="player_profile">
+      <axis name="di_button_2" />
+    </action>
+    <group name="camera">
+      <action name="next">
+        <axis name="di_button_13" />
+      </action>
+      <action name="previous">
+        <axis name="di_button_12" />
+      </action>
+    </group>
+    <group name="driver">
+      <action name="next">
+        <axis name="di_button_5" />
+      </action>
+      <action name="previous">
+        <axis name="di_button_7" />
+      </action>
+    </group>
+    <group name="replay">
+      <action name="pause">
+        <axis name="di_button_0" />
+      </action>
+      <action name="photomode_switcher">
+        <axis name="di_button_3" />
+      </action>
+      <group name="speed">
+        <action name="down">
+          <axis name="di_button_7" />
+        </action>
+        <action name="up">
+          <axis name="di_button_5" />
+        </action>
+      </group>
+    </group>
+    <group name="toggle">
+      <action name="controls">
+        <axis name="di_button_21" />
+      </action>
+      <action name="list">
+        <axis name="di_button_0" />
+      </action>
+      <action name="menu">
+        <axis name="di_button_36" />
+      </action>
+      <action name="standings">
+        <axis name="di_button_3" />
+      </action>
+      <action name="ui">
+        <axis name="di_button_23" />
+      </action>
+    </group>
+  </group>
+</action_map>
