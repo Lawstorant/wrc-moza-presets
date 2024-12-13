@@ -23,10 +23,10 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 - Map both button mode / axis mode in both presets.
 
 ### ESX Rim:
-- Renamed the ES preset to ESX to reflect which rim it's made for (thanks @plumpo)
+- Renamed the ES preset to ESX to reflect which rim it's made for (thanks [@plumpo](https://github.com/plumpo))
 
 ### ES Rim:
-- @plumpo created a completely new preset for the ES rim. All the labels and stock bindings now match their assigned buttons
+- [@plumpo](https://github.com/plumpo) created a completely new preset for the ES rim. All the labels and stock bindings now match their assigned buttons
 
 ### CS V2P Rim:
 - Swap the usage of `BOX`/`FL` buttons to be more ergonomic (`FL` button is easier to access as `select` mapping).
