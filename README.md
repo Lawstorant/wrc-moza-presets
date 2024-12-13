@@ -22,6 +22,12 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 - Modified deadzone values.
 - Map both button mode / axis mode in both presets.
 
+### ESX Rim:
+- Renamed the ES preset to ESX to reflect which rim it's made for (thanks @plumpo)
+
+### ES Rim:
+- @plumpo created a completely new preset for the ES rim. All the labels and stock bindings now match their assigned buttons
+
 ### CS V2P Rim:
 - Swap the usage of `BOX`/`FL` buttons to be more ergonomic (`FL` button is easier to access as `select` mapping).
 - Map `dial_press`, `dial_left` and `dial_right` to both rotaries (right rotary uses `dial_2_*` variant).

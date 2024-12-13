@@ -2,30 +2,29 @@
 <action_map name="moza_rim_es" sub_device_name="moza_rim" library="lib_direct_input" version="7">
   <axis_map>
     <axis name="di_button_0" axis_set_name="black_text" axis_set_id="a" />
-	<axis name="di_button_1" axis_set_name="black_text" axis_set_id="b" />
-	<axis name="di_button_2" axis_set_name="black_text" axis_set_id="x" />
-	<axis name="di_button_3" axis_set_name="black_text" axis_set_id="y" />
-	<axis name="di_button_4" axis_set_name="dpad" axis_set_id="0_up" />
-	<axis name="di_button_5" axis_set_name="dpad" axis_set_id="0_right" />
-	<axis name="di_button_6" axis_set_name="dpad" axis_set_id="0_down" />
-	<axis name="di_button_7" axis_set_name="dpad" axis_set_id="0_left" />
-	<axis name="di_button_12" axis_set_name="device" axis_set_id="gear_down" />
-	<axis name="di_button_13" axis_set_name="device" axis_set_id="gear_up" />
-	<axis name="di_button_18" axis_set_name="black_text" axis_set_id="n" />
-	<axis name="di_button_19" axis_set_name="black_text" axis_set_id="wip" />
-	<axis name="di_button_20" axis_set_name="black_text" axis_set_id="fl" />
-	<axis name="di_button_21" axis_set_name="black_text" axis_set_id="cam" />
-	<axis name="di_button_22" axis_set_name="black_text" axis_set_id="radio" />
-	<axis name="di_button_23" axis_set_name="black_text" axis_set_id="s1" />
-	<axis name="di_button_24" axis_set_name="black_text" axis_set_id="home" />
-	<axis name="di_button_31" axis_set_name="black_text" axis_set_id="p" />
-	<axis name="di_button_32" axis_set_name="black_text" axis_set_id="box" />
-	<axis name="di_button_33" axis_set_name="black_text" axis_set_id="pl" />
-	<axis name="di_button_34" axis_set_name="black_text" axis_set_id="r" />
-	<axis name="di_button_35" axis_set_name="black_text" axis_set_id="start" />
-	<axis name="di_button_36" axis_set_name="black_text" axis_set_id="s2" />
-	<axis name="di_button_37" axis_set_name="black_text" axis_set_id="menu" />
-	
+    <axis name="di_button_1" axis_set_name="black_text" axis_set_id="b" />
+    <axis name="di_button_2" axis_set_name="black_text" axis_set_id="x" />
+    <axis name="di_button_3" axis_set_name="black_text" axis_set_id="y" />
+    <axis name="di_button_4" axis_set_name="dpad" axis_set_id="0_up" />
+    <axis name="di_button_5" axis_set_name="dpad" axis_set_id="0_right" />
+    <axis name="di_button_6" axis_set_name="dpad" axis_set_id="0_down" />
+    <axis name="di_button_7" axis_set_name="dpad" axis_set_id="0_left" />
+    <axis name="di_button_12" axis_set_name="device" axis_set_id="gear_down" />
+    <axis name="di_button_13" axis_set_name="device" axis_set_id="gear_up" />
+    <axis name="di_button_18" axis_set_name="black_text" axis_set_id="n" />
+    <axis name="di_button_19" axis_set_name="black_text" axis_set_id="wip" />
+    <axis name="di_button_20" axis_set_name="black_text" axis_set_id="fl" />
+    <axis name="di_button_21" axis_set_name="black_text" axis_set_id="cam" />
+    <axis name="di_button_22" axis_set_name="black_text" axis_set_id="radio" />
+    <axis name="di_button_23" axis_set_name="black_text" axis_set_id="s1" />
+    <axis name="di_button_24" axis_set_name="black_text" axis_set_id="home" />
+    <axis name="di_button_31" axis_set_name="black_text" axis_set_id="p" />
+    <axis name="di_button_32" axis_set_name="black_text" axis_set_id="box" />
+    <axis name="di_button_33" axis_set_name="black_text" axis_set_id="pl" />
+    <axis name="di_button_34" axis_set_name="black_text" axis_set_id="r" />
+    <axis name="di_button_35" axis_set_name="black_text" axis_set_id="start" />
+    <axis name="di_button_36" axis_set_name="black_text" axis_set_id="s2" />
+    <axis name="di_button_37" axis_set_name="black_text" axis_set_id="menu" />
   </axis_map>
   <group name="driving">
     <action name="change_view">
