@@ -7,7 +7,7 @@
   </axis_map>
   <axis_defaults>
     <axis name="di_slider_0">
-      <action deadzone="0.2" saturation="0.6" name="driving.clutch" />
+      <action deadzone="0.2" saturation="0.8" name="driving.clutch" />
     </axis>
     <axis deadzone="0.01" saturation="1" name="di_z_axis">
       <action name="driving.accelerate" />

@@ -18,7 +18,7 @@
       <action name="spectator.replay.rewind" />
     </axis>
     <axis name="di_z_axis_rotation">
-      <action deadzone="0.2" saturation="0.6" name="driving.clutch" />
+      <action deadzone="0.2" saturation="0.8" name="driving.clutch" />
     </axis>
   </axis_defaults>
   <group name="driving">
