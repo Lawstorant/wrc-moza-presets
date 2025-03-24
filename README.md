@@ -10,6 +10,11 @@ Copy over all the files in this repository and overwrite if asked to. You need t
 - CRP2 pedal set is the same internally as the CRP. Name should be updated to CRP/CRP2 in the game
 - Added entry for Simagic DS-8X shifter
 
+### All Moza subtypes:
+Added a "None" entry for rims, pedals, shifters and handbrake. This ensures that the bindings
+of the missing devices won't be assigned and user will still get keybaord prompts in the UI.
+Escpecially helpful for people with non-Moza wheels on Moza wheelbases.
+
 ### Pedals:
 - Modified deadzone values for all axes. 1% by default, 20% for clutch.
 - Fix `sub_device_name` in CRP preset. Preset shows up in the game UI now.
